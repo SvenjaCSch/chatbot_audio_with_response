@@ -1,21 +1,11 @@
-import random
 import datetime
-import webbrowser
 import pyttsx3
-import wikipedia
-from pygame import mixer
 import speech_recognition as sr
-import pandas as pd
-import numpy as np
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.trainers import ListTrainer
 
 import time
 time.clock = time.time
-
-import yaml
-import os
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
@@ -51,5 +41,3 @@ while True:
             print("Could not understand a word.")
             engine.say('I didnt get that. Rerun the code')
             engine.runAndWait()
-
-    
